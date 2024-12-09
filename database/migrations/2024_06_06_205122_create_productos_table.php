@@ -13,7 +13,7 @@ class CreateProductosTable extends Migration
             $table->id();
             $table->string('codigo')->unique()->default(Str::uuid()); // Campo 'codigo' con valor predeterminado único
             $table->string('nombre');
-            $table->decimal('precio', 8, 2);
+            $table->decimal('precio', 15, 2);
             $table->integer('stock');
             $table->timestamps();
         });
